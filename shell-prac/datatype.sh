@@ -15,6 +15,6 @@ echo "leaders are=${leaders[@]}"
 
 echo "First Leader is=${leaders[0]}"
 
-echo "Second leader is=${leader[1]}"
+echo "Second leader is=${leaders[1]}"
 
 echo "Third Leader is=${leaders[2]}"
