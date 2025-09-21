@@ -10,3 +10,5 @@ echo "current directory=$PWD"
 echo "Who is running the scrpit=$USER"
 
 echo "home directory=$HOME"
+
+echo "PID of this script=$$"
