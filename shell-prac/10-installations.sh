@@ -9,7 +9,7 @@ fi
 
 dnf install mysql -y
 
-if [ $userid -ne 0 ]; then
+if [ $? -ne 0 ]; then
    echo "run with sudo user"
 exit 1
 
@@ -19,7 +19,7 @@ fi
 
 dnf install nginx -y
 
-if [ $userid -ne 0 ]; then
+if [ $? -ne 0 ]; then
    echo "run with root user"
 
 else
