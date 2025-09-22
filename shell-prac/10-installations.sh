@@ -23,7 +23,7 @@ if [ $? -ne 0 ]; then
    echo "run with root user"
 
 else
-  echo "inginx install success"
+  echo "nginx install success"
 
 fi
   
