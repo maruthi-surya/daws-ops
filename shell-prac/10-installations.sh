@@ -12,7 +12,7 @@ fi
 
 dnf install mysql -y
 
-elif [ $userid -ne 0 ]; then
+if [ $userid -ne 0 ]; then
 
    echo "run with sudo user"
 
