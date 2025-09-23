@@ -16,10 +16,10 @@ fi
 validate(){
 
 if [ $1 -ne 0 ]; then
-  echo "ERROR:: $2 install failed "
+  echo -e "ERROR:: $2 install $R failed $N"
   exit 1
 else
-  echo "$2 install success"
+  echo -e "$2 install $G success $N"
 fi
 
 }
@@ -30,7 +30,7 @@ if [ $? -ne 0 ]; then
    dnf install mysql -y
    validate $? "mysql"
 else
-  echo "mysql already installed .... Skipping"
+  echo -e "mysql already installed .... $Y Skipping $N"
 fi
 
 dnf list installed nginx
@@ -40,5 +40,5 @@ if [ $? -ne 0 ]; then
   validate $? "nginx"
 
 else
-  echo "nginx already installed .... Skipping"
+  echo -e "nginx already installed .... $Y Skipping $N"
 fi
