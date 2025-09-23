@@ -24,7 +24,7 @@ fi
 
 }
 
-for package $@ 
+for package in $@ 
 do 
 echo "package name is: $package"
 done
