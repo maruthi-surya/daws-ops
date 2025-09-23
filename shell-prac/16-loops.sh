@@ -26,5 +26,12 @@ fi
 
 for package in $@ 
 do 
-echo "package name is: $package"
+dnf list linstalled $package
+
+if [ $? -ne 0 ]; then
+  dnf install $package -y
+  validate() $? $package
+else
+echo "$package already installed"
+fi
 done
