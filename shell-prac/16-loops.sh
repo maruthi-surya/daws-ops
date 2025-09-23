@@ -32,6 +32,6 @@ if [ $? -ne 0 ]; then
   dnf install $package -y
   validate $? "$package"
 else
-echo "$package already installed"
+echo "$package already installed .... $Y Skipping $N"
 fi
 done
