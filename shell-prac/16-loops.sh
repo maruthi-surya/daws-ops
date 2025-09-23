@@ -30,7 +30,7 @@ dnf list linstalled $package
 
 if [ $? -ne 0 ]; then
   dnf install $package -y
-  validate() $? $package
+  validate() $? "$package"
 else
 echo "$package already installed"
 fi
