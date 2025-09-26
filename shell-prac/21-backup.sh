@@ -18,12 +18,11 @@ curr_file=$( echo $0 | cut -d "." -f1) # spliing the file name with .
 log_file="$log_dir/$curr_file.log" # log file name
 echo "$log_file"
 
-if [! -d $source_dir ]; then
+if [ ! -d $source_dir ]; then
    echo "source directory: $source_dir does not exist"
 
 fi
 
-if [ ! -d dest_dir ]; then
+if [ ! -d $dest_dir ]; then
    echo "dest directory" $dest_dir does not exist"
-
 fi
