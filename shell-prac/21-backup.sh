@@ -50,15 +50,15 @@ else
   echo "no files present"
 fi
 
-TIMESTAMP=$(date +%F-%H-%M)
-zip_file_name="$dest_dir/app_log_$TIMESTAMP.zip"
-echo "$zip_file_name"
+ TIMESTAMP=$(date +%F-%H-%M)
+ zip_file_name="$dest_dir/app_log_$TIMESTAMP.zip"
+ echo "$zip_file_name"
 
-find $source_dir -name "*.log" -type f | zip -@ -j "$zip_file_name"
+ find $source_dir -name "*.log" -type f | zip -@ -j "$zip_file_name"
 
-if [ -f $zip_file_name ]
- then
-  echo "zip success"
+ if [ -f $zip_file_name ]
+   then
+   echo "zip success"
     while IFS= read -r filepath
     do
    echo "deleting files:$filepath"
