@@ -59,14 +59,13 @@ fi
 if [ -f $zip_file_name ]
    then
    echo "zip success"
-   exit 1
+  while IFS= read -r filepath
+    do
+    echo "deleting files:$filepath"
+    rm -rf $filepath
+    echo "deleted files: $filepath"
+   done
+else
+echo "no files to archive"
 fi
-
-while IFS= read -r filepath
- do
-   echo "deleting files:$filepath"
-   rm -rf $filepath
-   echo "deleted files: $filepath"
-done
-
 
