@@ -17,6 +17,7 @@ else
 fi
 
 }
+
 dnf install mysql -y
 validate $? "mysql"
 
