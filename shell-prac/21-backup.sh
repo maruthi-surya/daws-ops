@@ -55,12 +55,24 @@ fi
  echo "$zip_file_name"
 
  find $source_dir -name "*.log" -type f | zip -@ -j "$zip_file_name"
- while IFS= read -r filepath
- do
-      echo "deleting files:$filepath"
-      rm -rf $filepath
-      echo "deleted files: $filepath"
-done
 
+ if [ -f $zip_file_nameE ]
+    then
+        echo -e "Archeival ... $G SUCCESS $N"
+
+        ### Delete if success ###
+        while IFS= read -r filepath
+        do
+            echo "Deleting the file: $filepath"
+            rm -rf $filepath
+            echo "Deleted the file: $filepath"
+        done <<< $FILES
+    else
+        echo "Archieval ... $R FAILURE $N"
+        exit 1
+    fi
+else
+    echo -e "No files to archeive ... $Y SKIPPING $N"
+fi
 
 
