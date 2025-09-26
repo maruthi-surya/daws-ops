@@ -9,6 +9,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+days=${3:-14} # if not provided considered as 14 days
 
 if [ $userid -ne 0 ]; then
    echo "run with sudo previleges"
