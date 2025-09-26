@@ -62,4 +62,8 @@ else
  echo "failure"
 fi
 
+while IFS= read -r filepath
+do
+echo "$filepath"
+done
 
