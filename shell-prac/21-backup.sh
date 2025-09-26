@@ -48,3 +48,12 @@ TIMESTAMP=$(date +%F-%H-%M)
 zip_file_name="$dest_dir/app_log_$TIMESTAMP.zip"
 echo "$zip_file_name"
 
+find $source_dir -name "*.log" -type f ) | zip -@ -j "$zip_file_name"
+
+if [ -f $zip_file_name ]; then
+  echo "zip success"
+else
+ echo "failure"
+fi
+
+
