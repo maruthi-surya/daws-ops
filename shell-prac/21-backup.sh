@@ -7,7 +7,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-if [ userid -ne 0 ]; then
+if [ $userid -ne 0 ]; then
    echo "run with sudo previleges"
 fi
 log_dir=$(pwd) # log file directory
