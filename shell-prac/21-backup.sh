@@ -18,16 +18,25 @@ curr_file=$( echo $0 | cut -d "." -f1) # spliing the file name with .
 log_file="$log_dir/$curr_file.log" # log file name
 echo "$log_file"
 
-if [ ! -d $source_dir ]; then
+if [ ! -d $source_dir ]; then #source directory validation
    echo "source directory: $source_dir does not exist"
 else
   echo "directory exist: $source_dir"
 
 fi
 
-if [ ! -d $dest_dir ]; then
+if [ ! -d $dest_dir ]; then #destination directory validation
    echo "dest directory: $dest_dir does not exist"
 else
   echo "directory exist: $dest_dir"
 
 fi
+
+files=$( Find $source_dir -name "*.log" -type f -mtime +$days)
+
+if [ $? -ne 0 ]; then
+   echo "no files present"
+else
+  echo "files found"
+fi
+
