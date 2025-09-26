@@ -33,7 +33,7 @@ else
 
 fi
 
-files=$( find $source_dir -name "*.log" -type f -mtime +$days)
+files=$( find $source_dir -name "*.log" -type f ) #-mtime +$days
 
 if [ ! -z {$files} ]; then
    echo "no files present"
