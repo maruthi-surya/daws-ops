@@ -61,7 +61,7 @@ then
             echo "Deleting the file: $filepath"
             rm -rf $filepath
             echo "Deleted the file: $filepath"
-        done <<< $FILES
+        done <<< $files
 else
         echo "Archieval ... $R FAILURE $N"
         exit 1
