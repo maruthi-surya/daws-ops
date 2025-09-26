@@ -64,6 +64,8 @@ fi
 
 while IFS= read -r filepath
 do
-echo "$filepath"
+echo "deleting files:$filepath"
+rm -rf $filepath
+echo "deleted files: $filepath"
 done
 
