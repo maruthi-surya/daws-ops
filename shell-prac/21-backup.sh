@@ -20,9 +20,14 @@ echo "$log_file"
 
 if [ ! -d $source_dir ]; then
    echo "source directory: $source_dir does not exist"
+else
+  echo "directory exist: $source_dir"
 
 fi
 
 if [ ! -d $dest_dir ]; then
    echo "dest directory: $dest_dir does not exist"
+else
+  echo "directory exist: $dest_dir"
+
 fi
