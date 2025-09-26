@@ -45,11 +45,6 @@ files=$( find $source_dir -name "*.log" -type f ) #-mtime +$days
 echo "file: $files"
 
 if [ ! -z "{$files}" ]; then
-   echo "files found"
-else
-  echo "no files present"
-fi
-
  TIMESTAMP=$(date +%F-%H-%M)
  zip_file_name="$dest_dir/app_log_$TIMESTAMP.zip"
  echo "$zip_file_name"
@@ -71,7 +66,8 @@ fi
         echo "Archieval ... $R FAILURE $N"
         exit 1
     fi
-   echo -e "No files to archeive ... $Y SKIPPING $N"
+else
+    echo -e "No files to archeive ... $Y SKIPPING $N"
 fi
 
 
