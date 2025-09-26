@@ -63,7 +63,7 @@ if [ ! -z "{$files}" ]
             echo "Deleted the file: $filepath"
         done <<< $files
  else
-        echo "Archieval ... $R FAILURE $N"
+        echo -e "Archieval ... $R FAILURE $N"
         exit 1
  fi
 else
