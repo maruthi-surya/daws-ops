@@ -44,3 +44,7 @@ else
   echo "no files present"
 fi
 
+TIMESTAMP=$(date +%F-%H-%M)
+zip_file_name="$dest_dir/app_log_$TIMESTAMP.zip"
+echo "$zip_file_name"
+
