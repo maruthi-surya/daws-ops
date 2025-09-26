@@ -24,5 +24,5 @@ if [ ! -d $source_dir ]; then
 fi
 
 if [ ! -d $dest_dir ]; then
-   echo "dest directory" $dest_dir does not exist"
+   echo "dest directory: $dest_dir does not exist"
 fi
