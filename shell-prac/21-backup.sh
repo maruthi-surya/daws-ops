@@ -36,6 +36,8 @@ fi
 
 files=$( find $source_dir -name "*.log" -type f ) #-mtime +$days
 
+echo "file: $files"
+
 if [ ! -z "{$files}" ]; then
    echo "files found"
 else
