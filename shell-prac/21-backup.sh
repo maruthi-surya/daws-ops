@@ -52,7 +52,7 @@ if [ ! -z "{$files}" ]; then
  find $source_dir -name "*.log" -type f | zip -@ -j "$zip_file_name"
 
  if [ -f $zip_file_nameE ]
-    then
+then
         echo -e "Archeival ... $G SUCCESS $N"
 
         ### Delete if success ###
@@ -62,10 +62,10 @@ if [ ! -z "{$files}" ]; then
             rm -rf $filepath
             echo "Deleted the file: $filepath"
         done <<< $FILES
-    else
+else
         echo "Archieval ... $R FAILURE $N"
         exit 1
-    fi
+fi
 else
     echo -e "No files to archeive ... $Y SKIPPING $N"
 fi
