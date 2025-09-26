@@ -14,6 +14,5 @@ for (( i=1; i<${#numbers[@]}; i++ )); do
     fi
 done
 
-
-echo "The largest number in the array is: $max"
 done
+echo "The largest number in the array is: $max"
