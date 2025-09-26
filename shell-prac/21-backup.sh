@@ -58,7 +58,7 @@ find $source_dir -name "*.log" -type f | zip -@ -j "$zip_file_name"
 
 if [ -f $zip_file_name ]; then
   echo "zip success"
-fi
+
 
 while IFS= read -r filepath
 do
@@ -66,4 +66,5 @@ echo "deleting files:$filepath"
 rm -rf $filepath
 echo "deleted files: $filepath"
 done
+fi
 
