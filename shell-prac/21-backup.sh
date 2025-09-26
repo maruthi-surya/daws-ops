@@ -58,8 +58,6 @@ find $source_dir -name "*.log" -type f | zip -@ -j "$zip_file_name"
 
 if [ -f $zip_file_name ]; then
   echo "zip success"
-else
- echo "failure"
 fi
 
 while IFS= read -r filepath
