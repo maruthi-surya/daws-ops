@@ -59,6 +59,7 @@ fi
 if [ -f $zip_file_name ]
    then
    echo "zip success"
+   exit 1
 fi
 
 while IFS= read -r filepath
