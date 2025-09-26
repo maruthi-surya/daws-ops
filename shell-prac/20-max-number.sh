@@ -1,6 +1,6 @@
 #!/bin/bash
 
-numbers=$@
+numbers="$@"
 
 # Initialize max with the first element of the array
 max=${numbers[0]}
