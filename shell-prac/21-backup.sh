@@ -32,7 +32,7 @@ else
 
 fi
 
-files=$( Find $source_dir -name "*.log" -type f -mtime +$days)
+files=$( find $source_dir -name "*.log" -type f -mtime +$days)
 
 if [ $? -ne 0 ]; then
    echo "no files present"
