@@ -1,6 +1,6 @@
 #!/bin/bash
 
-numbers=$*
+for numbers in $@; do
 
 # Initialize max with the first element of the array
 max=${numbers[0]}
@@ -14,4 +14,6 @@ for (( i=1; i<${#numbers[@]}; i++ )); do
     fi
 done
 
+
 echo "The largest number in the array is: $max"
+done
