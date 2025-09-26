@@ -15,6 +15,7 @@ if [ $userid -ne 0 ]; then
    echo "run with sudo previleges"
    exit 1
 fi
+
 log_dir=$(pwd) # log file directory
 curr_file=$( echo $0 | cut -d "." -f1) # spliing the file name with .
 log_file="$log_dir/$curr_file.log" # log file name
@@ -23,8 +24,8 @@ echo "$log_file"
 if [ $# -lt 2 ]; then
 echo "provide atleast 2 args"
 exit 1
-if
- 
+fi
+
 if [ ! -d $source_dir ]; then #source directory validation
    echo "source directory: $source_dir does not exist"
 else
