@@ -34,4 +34,5 @@ if [ $? -ne 0 ]; then
 else
   echo "nginx install success"
 fi
+done
   
