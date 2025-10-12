@@ -13,10 +13,6 @@ if [ $? -ne 0 ]; then
   echo "mysql not available proceed with installation"
 fi
 
-if [ $? -ne 0 ]; then
-   echo "run with sudo user"
-exit 1
-
 dnf install mysql-server -y
 
 if [ $? -ne 0 ]; then
