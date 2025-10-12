@@ -11,7 +11,7 @@ dnf list installed mysql
 
 if [ $? -ne 0 ]; then
   echo "mysql not available proceed with installation"
-if
+fi
 
 if [ $? -ne 0 ]; then
    echo "run with sudo user"
@@ -29,7 +29,7 @@ dnf list installed nginx
 
 if [ $? -ne 0 ]; then
   echo "nginx not available proceed with installation"
-if
+fi
 
 dnf install nginx -y
 
