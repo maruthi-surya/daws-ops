@@ -7,20 +7,34 @@ if [ $userid -ne 0 ]; then
 exit 1
 fi
 
-dnf install mysql -y
+dnf list installed mysql 
+
+if [ $? -ne 0 ]; then
+  echo "mysql not available proceed with installation"
+if
 
 if [ $? -ne 0 ]; then
    echo "run with sudo user"
 exit 1
 
+dnf install mysql-server -y
+
+if [ $? -ne 0 ]; then
+ echo "mysql install failed"
 else
    echo "mysql install sucess"
 fi
 
+dnf list installed nginx
+
+if [ $? -ne 0 ]; then
+  echo "nginx not available proceed with installation"
+if
+
 dnf install nginx -y
 
 if [ $? -ne 0 ]; then
-   echo "run with root user"
+   echo "nginx install failed"
 
 else
   echo "nginx install success"
